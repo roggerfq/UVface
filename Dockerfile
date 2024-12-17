@@ -41,7 +41,7 @@ RUN apt-get install -y qt4-default
 RUN mkdir -p /home/UVface_build
 
 # Create the UVface folder in /home for development purposes
-RUN mkdir -p /home/UVface
+#RUN mkdir -p /home/UVface
 
 # Copy all files and folders (except the Dockerfile) to the UVface_build directory
 COPY . /home/UVface_build/
