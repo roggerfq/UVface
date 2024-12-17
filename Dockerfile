@@ -37,25 +37,28 @@ ENV DISPLAY :0
 # Install Qt4.8
 RUN apt-get install -y qt4-default
 
-# Create the UVface folder in /home
+# Create the UVface_build folder in /home
+RUN mkdir -p /home/UVface_build
+
+# Create the UVface folder in /home for development purposes
 RUN mkdir -p /home/UVface
 
-# Copy all files and folders (except the Dockerfile) to the UVface directory
-COPY . /home/UVface/
-RUN rm /home/UVface/Dockerfile
+# Copy all files and folders (except the Dockerfile) to the UVface_build directory
+COPY . /home/UVface_build/
+RUN rm /home/UVface_build/Dockerfile
 
 # Download, extract, and keep the specific file
 RUN cd /tmp && \
     wget https://thor.robots.ox.ac.uk/affine/extract_features2.tar.gz && \
     tar -xzvf extract_features2.tar.gz && \
-    mv extract_features/extract_features_64bit.ln /home/UVface/ && \
+    mv extract_features/extract_features_64bit.ln /home/UVface_build/ && \
     rm -rf /tmp/*
 
-# Set the working directory to UVface/build
-WORKDIR /home/UVface/build
+# Set the working directory to UVface_build/build
+WORKDIR /home/UVface_build/build
 
 # Build the project
 RUN cmake .. && make
 
-# Set the default command to run UVface++
-CMD ["./UVface++"]
+# Set the default command to run UVface_build++
+CMD ["./UVface_build++"]
