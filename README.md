@@ -3,7 +3,9 @@
 ## Description
 UVface++ is a software solution designed for real-time human face detection and recognition without the need for complex hardware, such as GPUs. It performs robustly under challenging conditions, including variations in lighting, occlusion, pose, and expression. Remarkably, the system can operate effectively with only one training image per person. The source code is entirely developed in C++ and leverages OpenMP for parallelization.
 
-<img src="doc/UVface.gif" alt="UVface GIF" style="display: block; margin-left: auto; margin-right: auto;">
+<div align="center">
+    <img src="doc/UVface.gif" alt="UVface GIF">
+</div>
 
 ## Installation and Execution
 
