@@ -57,6 +57,7 @@
 //For reading directories
 #include <sys/types.h>
 #include <dirent.h>
+#include <sys/mount.h> // mount
 
 /*
 bool mountRamdisk() {
@@ -115,6 +116,39 @@ void createSedgelapFile() {
 
 }
 
+/*__________________this funtion are used to mount the ramdisk________________*/
+void ensureDirectoryExists(const std::string& path) {
+    std::string command = "mkdir -p " + path;
+    if (system(command.c_str()) == 0) {
+        std::cout << "Directory created: " << path << std::endl;
+    } else {
+        std::cerr << "Error al crear el directorio: " << path << std::endl;
+        exit(EXIT_FAILURE);
+    }
+}
+
+void mountTmpfs(const std::string& path) {
+    if (mount("tmpfs", path.c_str(), "tmpfs", 0, "size=512M,mode=777") == 0) {
+        std::cout << "tmpfs mounted on: " << path << std::endl;
+    } else {
+        perror("Error mounting tmpfs");
+        exit(EXIT_FAILURE);
+    }
+}
+
+void copyFile(const std::string& source, const std::string& destination) {
+    std::string command = "cp " + source + " " + destination;
+    if (system(command.c_str()) == 0) {
+        std::cout << "File copied from " << source << " to " << destination << std::endl;
+    } else {
+        std::cerr << "Error copying the file: " << source << std::endl;
+        exit(EXIT_FAILURE);
+    }
+}
+
+/*_____________________________________________________________________________*/
+
+
 GTP::GTP(): maxFeatures(8000), szRect(40), szHistlow(128) {
 
   //__________Simple exception handling for the case where ramdisk_UVface was not mounted properly_______ 
@@ -129,7 +163,19 @@ GTP::GTP(): maxFeatures(8000), szRect(40), szHistlow(128) {
   It is assumed that an emulated folder in RAM named ramdisk_UVface has been created*/
 
   //fp.open("/ramdisk_UVface/imagen.pgm.sedgelap",std::ifstream::in);
+  std::string ramdiskPath = "/ramdisk_UVface";
+  std::string sourceFile = "../extract_features_64bit.ln";
+  std::string destinationFile = ramdiskPath + "/extract_features_64bit.ln";
+  //___mounting ramdisk_______//
+  // Paso 1: Asegurar que el directorio existe
+  ensureDirectoryExists(ramdiskPath);
+  // Paso 2: Montar tmpfs
+  mountTmpfs(ramdiskPath);
+  // Paso 3: Copiar el archivo
+  copyFile(sourceFile, destinationFile);
+  //__________________________//
   createSedgelapFile();
+  
   fp.open("/ramdisk_UVface/imagen.pgm.sedgelap", std::ifstream::in);
 
   vec_dp = new double * [maxFeatures];
