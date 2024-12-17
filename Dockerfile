@@ -61,4 +61,4 @@ WORKDIR /home/UVface_build/build
 RUN cmake .. && make
 
 # Set the default command to run UVface_build++
-CMD ["./UVface_build++"]
+CMD ["./UVface++"]
