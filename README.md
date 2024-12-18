@@ -89,6 +89,29 @@ The interface also allows setting the checkbox for **Activate skin color**, whic
 
 This panel allows loading or creating a database. In both cases, the first step is clicking the **Load dataset** button. If an empty folder or a folder with subfolders containing images is selected, the software will configure this folder as a database. If a folder that has been previously configured as a database is selected, the software will load the data. After that, the panel allows adding or deleting people, and adding images to each user either from files or by capturing images from a camera (see Setting the camera). The panel also allows cropping images using the mouse in the video panel and resizing individual images, all images of a user, or all images in the dataset.
 
+This panel includes three additional tabs:
+
+#### Description Tab
+The **Descriptor** tab allows selecting the descriptor to use. If **GTP (Gabor Ternary Pattern)** is selected, it is possible to compute the PCA matrix with features extracted from the current dataset or use a default PCA matrix computed with 1,000 individuals randomly selected from the [LFW dataset](https://vis-www.cs.umass.edu/lfw/).
+
+#### SRC Tab
+The **SRC** tab allows configuring the parameters of the sparse solution. Key parameters include:
+
+- **Fast filtering**: The maximum number of descriptors extracted from a test image to compute the sparse solution. The descriptors selected are those with the highest correlation with the descriptors in the database.
+- **Recognition threshold**: This is compared with the confidence score given by the system to a test image. If the confidence score is higher than the threshold, the system will recognize the test image as one of the individuals in the dataset;  otherwise, it will identify the test image as "Unknown".
+
+For more details about the other parameters in this tab, consult reference [4].
+
+#### Test Tab
+The **Test** tab allows configuring the size to which the images will be rescaled before being processed by the face recognition system. A larger size improves accuracy but reduces computational performance.
+
+This tab also provides the option to test only the face recognition system with images acquired from files or captured from a camera. When an image is tested, the **Result per Image** panel will display various metrics associated with the face recognition algorithm.
+
+##### Interactive Sparse Solution Plot
+The **Plot Sparse Solution** button opens an interactive GUI that allows:
+- Viewing the sparse approximation of the descriptors for the tested image.
+- Analyzing the components of the sparse solution associated with each individual in the database.
+- Observing the reconstruction error for each class in the database.
 
 <div align="center">
     <img src="docs/descriptor_config_gui.svg" alt="descriptor_config_gui">
