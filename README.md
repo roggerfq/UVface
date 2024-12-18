@@ -38,9 +38,9 @@ The image below illustrates the main interface of UVface++ running on Ubuntu 18.
 
 ### Face Detection
 
-The face detection stage employs a cascade of classifiers constructed using UVtrainer, implementing the algorithm described in [1]. The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation. The following diagram provides an overview of the face detection process:
+The face detection stage is a cascade of classifiers constructed using UVtrainer. The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection algorithm:
 
-[Insert Diagram Here]
+![Alt text](docs/face_detection.svg)
 
 The video below demonstrates how to load and configure the cascade classifier for face detection:
 
