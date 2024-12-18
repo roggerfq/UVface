@@ -130,8 +130,11 @@ The **Plot Sparse Solution** button opens an interactive GUI that allows:
 
 The following video briefly showcases this GUI:
 
-[![Demo Video](https://img.youtube.com/vi/m9HjeDe2bR4/0.jpg)](https://www.youtube.com/watch?v=m9HjeDe2bR4)
-
+<div style="text-align: center;">
+  <a href="https://www.youtube.com/watch?v=m9HjeDe2bR4" target="_blank">
+    <img src="https://img.youtube.com/vi/m9HjeDe2bR4/0.jpg" alt="Demo Video">
+  </a>
+</div>
 
 ## Extending the System
 
