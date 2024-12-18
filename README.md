@@ -132,7 +132,7 @@ The following video briefly showcases this GUI:
 
 <p align="center">
   <a href="https://youtu.be/m9HjeDe2bR4">
-    <img src="https://img.youtube.com/vi/m9HjeDe2bR4/0.jpg" alt="Custom Demo Video">
+    <img src="docs/Sparse_solution_plot.png" alt="Custom Demo Video">
   </a>
 </p>
 
