@@ -61,7 +61,9 @@ The face recognition process in UVface++ implements the algorithm published in [
 
 The following diagram provides an overview of the face recognition process:
 
-[Insert Diagram Here]
+<div align="center">
+    <img src="docs/face_recognition.svg" alt="face_recognition">
+</div>
 
 The video below demonstrates how to build a simple dataset and use the software for face recognition from different sources, such as images, cameras, and videos:
 
