@@ -81,6 +81,9 @@ An important configuration is the **Detection degrees**; by default, it is set t
 
 The interface also allows setting the checkbox for **Activate skin color**, which activates a simple skin color algorithm and may help improve computation speed and reduce the false positive rate.
 
+### Face recognizer configuration
+
+This panel allows loading or creating a dataset. In both cases, the first step is clicking the **Load dataset** button. If an empty folder or a folder with subfolders containing images is selected, the software will configure this folder as a dataset. If a folder that has been previously configured as a dataset is selected, the software will load the data. After that, the panel allows adding or deleting people, and adding images to each user either from files or by capturing images from a camera (see Setting the camera). The panel also allows cropping images using the mouse in the video panel and resizing individual images, all images of a user, or all images in the dataset.
 
 
 <div align="center">
