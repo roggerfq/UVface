@@ -69,6 +69,13 @@ The video below demonstrates how to build a simple dataset and use the software 
 
 [Insert Video Here]
 
+## Interface Guide
+
+<div align="center">
+    <img src="docs/main_interface.svg" alt="face_detection">
+</div>
+
+
 ## Extending the System
 
 You can integrate a new descriptor into the system using the following template:
