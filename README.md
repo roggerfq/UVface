@@ -92,9 +92,19 @@ This panel allows loading or creating a database. In both cases, the first step 
 This panel includes three additional tabs:
 
 #### Description Tab
+
+<div align="center">
+    <img src="docs/descriptor_config_gui.svg" alt="descriptor_config_gui">
+</div>
+
 The **Descriptor** tab allows selecting the descriptor to use. If **GTP (Gabor Ternary Pattern)** is selected, it is possible to compute the PCA matrix with features extracted from the current dataset or use a default PCA matrix computed with 1,000 individuals randomly selected from the [LFW dataset](https://vis-www.cs.umass.edu/lfw/).
 
 #### SRC Tab
+
+<div align="center">
+    <img src="docs/SRC_config_gui.svg" alt="SRC_config_gui">
+</div>
+
 The **SRC** tab allows configuring the parameters of the sparse solution. Key parameters include:
 
 - **Fast filtering**: The maximum number of descriptors extracted from a test image to compute the sparse solution. The descriptors selected are those with the highest correlation with the descriptors in the database.
@@ -103,6 +113,11 @@ The **SRC** tab allows configuring the parameters of the sparse solution. Key pa
 For more details about the other parameters in this tab, consult reference [4].
 
 #### Test Tab
+
+<div align="center">
+    <img src="docs/test_config_gui.svg" alt="descriptor_config_gui">
+</div>
+
 The **Test** tab allows configuring the size to which the images will be rescaled before being processed by the face recognition system. A larger size improves accuracy but reduces computational performance.
 
 This tab also provides the option to test only the face recognition system with images acquired from files or captured from a camera. When an image is tested, the **Result per Image** panel will display various metrics associated with the face recognition algorithm.
@@ -113,11 +128,9 @@ The **Plot Sparse Solution** button opens an interactive GUI that allows:
 - Analyzing the components of the sparse solution associated with each individual in the database.
 - Observing the reconstruction error for each class in the database.
 
-<div align="center">
-    <img src="docs/descriptor_config_gui.svg" alt="descriptor_config_gui">
-    <img src="docs/SRC_config_gui.svg" alt="SRC_config_gui">
-    <img src="docs/test_config_gui.svg" alt="descriptor_config_gui">
-</div>
+The following video briefly showcases this GUI:
+
+[![Demo Video](https://img.youtube.com/vi/m9HjeDe2bR4/0.jpg)](https://www.youtube.com/watch?v=m9HjeDe2bR4)
 
 
 ## Extending the System
