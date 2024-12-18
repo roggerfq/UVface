@@ -73,6 +73,10 @@ The video below demonstrates how to build a simple dataset and use the software 
 
 The next figure shows the main interface along with the most important panels: the face detector configuration and the face recognizer configuration GUIs.
 
+<div align="center">
+    <img src="docs/main_interface.svg" alt="face_detection">
+</div>
+
 ### Face detector configuration
 
 This interface allows loading a cascade classifier stored in an XML file (this XML file is constructed with UVtrainer). The interface also allows configuring the **Base size** of the search windows, the **Step Factor** with which the search windows move, and the **Scale factor** by which the search window will increase its size after finishing scanning the image. **Maximum size** refers to the maximum allowed dimension (width or height) for an input image. To understand **GroupThreshold** and **EPS**, please refer to the [OpenCV documentation](https://docs.opencv.org/4.x/de/de1/group__objdetect__common.html).
@@ -84,11 +88,6 @@ The interface also allows setting the checkbox for **Activate skin color**, whic
 ### Face recognizer configuration
 
 This panel allows loading or creating a dataset. In both cases, the first step is clicking the **Load dataset** button. If an empty folder or a folder with subfolders containing images is selected, the software will configure this folder as a dataset. If a folder that has been previously configured as a dataset is selected, the software will load the data. After that, the panel allows adding or deleting people, and adding images to each user either from files or by capturing images from a camera (see Setting the camera). The panel also allows cropping images using the mouse in the video panel and resizing individual images, all images of a user, or all images in the dataset.
-
-
-<div align="center">
-    <img src="docs/main_interface.svg" alt="face_detection">
-</div>
 
 
 <div align="center">
