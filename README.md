@@ -65,7 +65,7 @@ The following diagram provides an overview of the face recognition process:
     <img src="docs/face_recognition.svg" alt="face_recognition">
 </div>
 
-The video below demonstrates how to build a simple dataset and use the software for face recognition from different sources, such as images, cameras, and videos:
+The video below demonstrates how to build a simple dataset and use the software for face recognition:
 
 [Insert Video Here]
 
