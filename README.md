@@ -76,6 +76,13 @@ The video below demonstrates how to build a simple dataset and use the software 
 </div>
 
 
+<div align="center">
+    <img src="docs/descriptor_config_gui.svg" alt="descriptor_config_gui">
+    <img src="docs/SRC_config_gui.svg" alt="SRC_config_gui">
+    <img src="docs/descriptor_config_gui.svg" alt="descriptor_config_gui">
+</div>
+
+
 ## Extending the System
 
 You can integrate a new descriptor into the system using the following template:
