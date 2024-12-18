@@ -71,6 +71,18 @@ The video below demonstrates how to build a simple dataset and use the software 
 
 ## Interface Guide
 
+The next figure shows the main interface along with the most important panels: the face detector configuration and the face recognizer configuration GUIs.
+
+1. **Face detector configuration:**
+
+This interface allows you to load a cascade classifier stored in an XML file (this XML file is constructed with UVtrainer). The interface also allows you to configure the **Base size** of the search windows, the **Step Factor** with which the search windows move, and the **Scale factor** by which the search window will increase its size after finishing scanning the image. **Maximum size** refers to the maximum allowed dimension (width or height) for an input image. To understand **GroupThreshold** and **EPS**, please refer to the following link in the OpenCV documentation.
+
+An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by commas, for example: 30, 15, 0, -15, and -30. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. 
+
+The interface also allows you to set the checkbox for the **Activate skin color** algorithm, which may help improve computation speed and reduce the false positives rate.
+
+
+
 <div align="center">
     <img src="docs/main_interface.svg" alt="face_detection">
 </div>
