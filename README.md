@@ -38,7 +38,7 @@ The image below illustrates the main interface of UVface++ running on Ubuntu 18.
 
 ### Face Detection
 
-The face detection stage is a cascade of classifiers (see [XML file](cascading_classifiers/clasificador_9_12102_unconstrained_f_max_0_2_evaluation.xml)) constructed using UVtrainer. The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection algorithm:
+The face detection process is a cascade of classifiers (see [XML file](cascading_classifiers/clasificador_9_12102_unconstrained_f_max_0_2_evaluation.xml)) constructed using UVtrainer. The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection algorithm:
 
 <div align="center">
     <img src="docs/face_detection.svg" alt="face_detection">
@@ -50,14 +50,14 @@ The video below demonstrates how to load and configure the cascade classifier fo
 
 ### Face Recognition
 
-Face recognition in UVface++ comprises two stages: feature extraction and classification.
+The face recognition process in UVface++ implements the algorithm published in [2], which comprises two stages: feature extraction and classification.
 
 1. **Feature Extraction:**
-   - This stage employs the Affine Covariant Region Detector to identify key points on the face image. These key points are invariant to various geometric and photometric transformations.
+   - This stage employs the Affine Covariant Region Detector [3] to identify key points on the face image. These key points are invariant to various geometric and photometric transformations.
    - Around each key point, a Gabor feature vector of 1296 dimensions is computed. Dimensionality reduction is then performed using PCA, resulting in a 128-dimensional feature vector.
 
 2. **Classification:**
-   - The extracted features from the test image are compared against those in the dataset using Sparse Representation Classification (SRC).
+   - The extracted features from the test image are compared against those in the dataset using Sparse Representation Classification (SRC) [4].
 
 The following diagram provides an overview of the face recognition process:
 
