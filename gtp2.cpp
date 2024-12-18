@@ -786,9 +786,34 @@ void GTP::savePca() {
 
 }
 
+
+// Function to check if a file exists and copy if it does not
+void ensurePCAFileExists(const std::string& path_pca_file) {
+    // Check if the file exists using the 'test' command
+    std::string checkCommand = "test -f \"" + path_pca_file + "\"";
+    int fileExists = system(checkCommand.c_str());
+
+    if (fileExists != 0) { // If file does not exist
+        // Copy the file using the 'cp' command
+        std::string copyCommand = "cp ../pca/pca.xml \"" + path_pca_file + "\"";
+        int copyResult = system(copyCommand.c_str());
+
+        if (copyResult == 0) {
+            std::cout << "File copied successfully to: " << path_pca_file << std::endl;
+        } else {
+            std::cerr << "Failed to copy file to: " << path_pca_file << std::endl;
+        }
+    } else {
+        std::cout << "File already exists: " << path_pca_file << std::endl;
+    }
+}
+
+
 void GTP::LoadPca() {
 
-  cv::FileStorage fs((pathDataBase + QString("/pca.xml")).toStdString(), cv::FileStorage::READ);
+  std::string path_pca_file = (pathDataBase + QString("/pca.xml")).toStdString();
+  ensurePCAFileExists(path_pca_file);//loading default pca
+  cv::FileStorage fs(path_pca_file, cv::FileStorage::READ);
 
   if (fs.isOpened()) { //In case there is no previous file yet
     fs["mean"] >> pca -> mean;
