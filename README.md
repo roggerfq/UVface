@@ -206,8 +206,6 @@ public:
 #endif
 ```
 
-### Implementation Example
-
 ```cpp
 #include "MyNewDescriptor.h"
 
