@@ -164,6 +164,7 @@ The following video briefly showcases this GUI:
 </p>
 
 
+
 ## Extending the System
 
 You can integrate a new descriptor into the system using the following template:
