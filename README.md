@@ -226,7 +226,8 @@ Eigen::MatrixXf* MyNewDescriptor::test(const cv::Mat &img) {
 }
 ```
 
-Finally, include the new descriptor in the recognizer:
+Finally, include the new descriptor to the system in the line 74 of [recognizerFacial.cpp](https://github.com/tu_usuario/tu_repositorio/blob/main/ruta/al/archivo/recognizerFacial.cpp#L74
+):
 
 ```cpp
 #include "MyNewDescriptor.h"
