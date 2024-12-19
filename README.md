@@ -140,8 +140,7 @@ The **Test** tab allows configuring the size to which the images will be rescale
 
 This tab also provides the option to test only the face recognition system with images acquired from files or captured from a camera. When an image is tested, the **Result per Image** panel will display various metrics associated with the face recognition algorithm.
 
-##### Interactive Sparse Solution Plot
-The **Plot Sparse Solution** button opens an interactive GUI that allows:
+Finally the **Plot Sparse Solution** button opens an interactive GUI that allows:
 - Viewing the sparse approximation of the descriptors for the tested image.
 - Analyzing the components of the sparse solution associated with each individual in the database.
 - Observing the reconstruction error for each class in the database.
