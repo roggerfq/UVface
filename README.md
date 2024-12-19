@@ -52,7 +52,7 @@ sudo docker run --privileged -e DISPLAY \
     -it uvface
 ```
 
-<span style="color:red">Note: To read the video from the URL, the 'device' field in the GUI must be set to -1.</span>
+**⚠️ Note:** To read the video from the URL, the 'device' field in the GUI must be set to `-1`.
 
 ### Face Detection
 
