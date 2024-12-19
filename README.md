@@ -4,7 +4,7 @@
 UVface++ is a real-time face recognition software that operates efficiently without requiring complex hardware, such as GPUs. It performs robustly under challenging conditions, including variations in lighting, pose, and expression. The source code is entirely written in C++ and leverages OpenMP for parallelization.
 
 <div align="center">
-    <img src="docs/UVface.gif" alt="UVface GIF">
+    <img src="docs/UVface_real_time.gif" alt="UVface GIF">
 </div>
 
 ## Installation and Execution (Linux)
@@ -89,7 +89,11 @@ The following diagram provides an overview of the face recognition process:
 
 The video below demonstrates how to build a simple dataset and use the software for face recognition:
 
-[Insert Video Here]
+<p align="center">
+  <a href="https://youtu.be/xdTAEethqy0">
+    <img src="docs/UVface_real_time_play.png" alt="Custom Demo Video">
+  </a>
+</p>
 
 ## Interface Guide
 
@@ -103,7 +107,7 @@ The next figure shows the main interface along with the most important panels: t
 
 This interface allows loading a cascade classifier stored in an XML file (this XML file is constructed using [UVtrainer](https://github.com/roggerfq/UVtrainer)). The interface also allows configuring the **Base size** of the search windows, the **Step Factor** with which the search windows move, and the **Scale factor** by which the search window will increase its size after finishing scanning the image. **Maximum size** refers to the maximum allowed dimension (width or height) for an input image. To understand **GroupThreshold** and **EPS**, please refer to the [OpenCV documentation](https://docs.opencv.org/4.x/de/de1/group__objdetect__common.html).
 
-An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by commas, for example: 30, 15, 0, -15, and -30. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. The next video demonstrates this feature of the software:
+An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by a space, for example: `30 15 0 -15 -30`. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. The next video demonstrates this feature of the software:
 
 <p align="center">
   <a href="https://youtu.be/q9VAUXHlR70">
