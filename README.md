@@ -91,7 +91,7 @@ The video below demonstrates how to build a simple dataset and use the software 
 
 <p align="center">
   <a href="https://youtu.be/xdTAEethqy0">
-    <img src="docs/UVface_real_time_play.png" alt="Custom Demo Video">
+    <img src="docs/UVface_real_time_play.svg" alt="Custom Demo Video">
   </a>
 </p>
 
