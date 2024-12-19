@@ -64,7 +64,11 @@ The face detection process is a cascade of classifiers (see [XML file](cascading
 
 The video below demonstrates how to load and configure the cascade classifier for face detection:
 
-[Insert Video Here]
+<p align="center">
+  <a href="https://youtu.be/g-c1EXFF7rk">
+    <img src="docs/face_detection_UVface_play.svg" alt="Custom Demo Video">
+  </a>
+</p>
 
 ### Face Recognition
 
