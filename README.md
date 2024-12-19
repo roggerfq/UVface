@@ -56,7 +56,7 @@ sudo docker run --privileged -e DISPLAY \
 
 ### Face Detection
 
-The face detection process is a cascade of classifiers (see [XML file](cascading_classifiers/clasificador_9_12102_unconstrained_f_max_0_2_evaluation.xml)) constructed using [UVtrainer](https://github.com/roggerfq/UVtrainer). The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection algorithm:
+The face detection process is a cascade of classifiers (see [XML file](cascading_classifiers/clasificador_9_12102_unconstrained_f_max_0_2_evaluation.xml)) constructed using [UVtrainer](https://github.com/roggerfq/UVtrainer). The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection process:
 
 <div align="center">
     <img src="docs/face_detection.svg" alt="face_detection">
