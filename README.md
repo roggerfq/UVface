@@ -21,7 +21,7 @@ Navigate to the `UVface` folder and build the Docker image with the following co
 docker build -t uvface .
 ```
 
-Finally, in the next command replace HOST_PATH with a path you want to share with the docker and execute to launch UVface++:
+Finally, in the next command replace HOST_PATH with a path you want to share with the container and execute to launch UVface++:
 
 ```bash
 sudo docker run --privileged -e DISPLAY \
@@ -40,12 +40,12 @@ If the container is executed inside a Linux system running on WSL2, it will have
 python stream.py
 ```
 
-Finally, execute the following command to launch UVface++:
+Finally, in the next command replace HOST_PATH with a path you want to share with the container and execute to launch UVface++:
 
 ```bash
 sudo docker run --privileged -e DISPLAY \
     --env="QT_X11_NO_MITSHM=1" \
-	-e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
+    -e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v HOST_PATH:/home/host \
     --device=/dev/video0:/dev/video0 \
