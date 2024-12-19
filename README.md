@@ -52,6 +52,8 @@ sudo docker run --privileged -e DISPLAY \
     -it uvface
 ```
 
+<span style="color:red">Note: To read the video from the URL, the 'device' field in the GUI must be set to -1.</span>
+
 ### Face Detection
 
 The face detection process is a cascade of classifiers (see [XML file](cascading_classifiers/clasificador_9_12102_unconstrained_f_max_0_2_evaluation.xml)) constructed using UVtrainer. The cascade is evaluated at multiple scales across the image. Each stage of the cascade consists of an ensemble of regression tree classifiers that use NPD features for evaluation [1]. The following diagram provides an overview of the face detection algorithm:
