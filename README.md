@@ -7,7 +7,7 @@ UVface++ is a real-time face recognition software that operates efficiently with
     <img src="docs/UVface.gif" alt="UVface GIF">
 </div>
 
-## Installation and Execution
+## Installation and Execution (Linux)
 
 To run the algorithm, first clone the repository:
 
@@ -22,31 +22,35 @@ docker build -t uvface .
 ```
 
 Finally, in the next command replace HOST_PATH with a path you want to share with the docker and execute to launch UVface++:
-**If the container is running directly on linux**
+
 ```bash
 sudo docker run --privileged -e DISPLAY \
     --env="QT_X11_NO_MITSHM=1" \
-    -e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v HOST_PATH:/home/host \
     --device=/dev/video0:/dev/video0 \
     -it uvface
 ```
 
-**If the container is running directly on linux**
+## Installation and Execution (Windows)
+
+If the container is executed inside a Linux system running on WSL2, it will have access to USB cameras. In this case, it is necessary to run the Python script `stream.py` located in the `stream` folder to capture video from the camera and send it to `http://172.20.16.1:5000/video_feed`:
+
+```cmd
+python stream.py
+```
+
+Finally, execute the following command to launch UVface++:
+
 ```bash
 sudo docker run --privileged -e DISPLAY \
     --env="QT_X11_NO_MITSHM=1" \
-    -e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
+	-e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -v HOST_PATH:/home/host \
     --device=/dev/video0:/dev/video0 \
     -it uvface
 ```
-
-This command grants the container necessary privileges, activates the QT graphical interface options, and configures a video URL for UVface++ to consume video feeds. This setup is essential for Windows systems where USB camera devices cannot be shared directly with Linux running in WSL2. For systems running Docker directly on Linux, the command also shares the USB camera device with Docker.
-
-The image below illustrates the main interface of UVface++ running on Ubuntu 18.04 through WSL2:
 
 ### Face Detection
 
