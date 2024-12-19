@@ -1,7 +1,7 @@
 # UVface++
 
 ## Description
-UVface++ is a software solution designed for real-time human face detection and recognition without the need for complex hardware, such as GPUs. It performs robustly under challenging conditions, including variations in lighting, occlusion, pose, and expression. Remarkably, the system can operate effectively with only one training image per person. The source code is entirely developed in C++ and leverages OpenMP for parallelization.
+UVface++ is a real-time face recognition software that operates efficiently without requiring complex hardware, such as GPUs. It performs robustly under challenging conditions, including variations in lighting, pose, and expression. The source code is entirely written in C++ and leverages OpenMP for parallelization.
 
 <div align="center">
     <img src="docs/UVface.gif" alt="UVface GIF">
@@ -21,13 +21,25 @@ Navigate to the `UVface` folder and build the Docker image with the following co
 docker build -t uvface .
 ```
 
-Finally, execute the following command to launch UVface++:
-
+Finally, in the next command replace HOST_PATH with a path you want to share with the docker and execute to launch UVface++:
+**If the container is running directly on linux**
 ```bash
 sudo docker run --privileged -e DISPLAY \
     --env="QT_X11_NO_MITSHM=1" \
     -e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v HOST_PATH:/home/host \
+    --device=/dev/video0:/dev/video0 \
+    -it uvface
+```
+
+**If the container is running directly on linux**
+```bash
+sudo docker run --privileged -e DISPLAY \
+    --env="QT_X11_NO_MITSHM=1" \
+    -e DEVICE_URL="http://172.20.16.1:5000/video_feed" \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v HOST_PATH:/home/host \
     --device=/dev/video0:/dev/video0 \
     -it uvface
 ```
