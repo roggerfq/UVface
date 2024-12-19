@@ -34,7 +34,7 @@ sudo docker run --privileged -e DISPLAY \
 
 ## Installation and Execution (Windows)
 
-If the container is executed inside a Linux system running on WSL2, it will have access to USB cameras. In this case, it is necessary to run the Python script `stream.py` located in the `stream` folder to capture video from the camera and send it to `http://172.20.16.1:5000/video_feed`:
+If the container is executed inside a Linux system running on WSL2, it will not have access to USB cameras. In this case, it is necessary to run the Python script `stream.py` located in the `stream` folder to capture video from the camera and send it to `http://172.20.16.1:5000/video_feed`:
 
 ```cmd
 python stream.py
