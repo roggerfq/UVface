@@ -161,7 +161,19 @@ The following video briefly showcases this GUI:
 
 ## Extending the System
 
-You can integrate a new descriptor into the system using the following template:
+It is possible to reimplement the feature extraction process in the face recognition algorithm. To do this, there is a special class called `ABSTRACT_DESCRIPTOR` (see [descriptor.h](https://github.com/roggerfq/UVface/blob/main/descriptor.h)) that contains three special virtual functions:
+
+```cpp
+// Virtual functions to override
+cv::Mat* baseDescriptor(const cv::Mat &img) override;
+void postProcessing(cv::Mat &baseDescriptor, cv::Mat &finalDescriptor, std::vector<int> &ithRows) override;
+Eigen::MatrixXf* test(const cv::Mat &img) override;
+```
+
+The reimplementation of the `baseDescriptor` method should take an image as input and return the set of descriptors extracted from this image. The `postProcessing` method is called by UVface once all the descriptors for a database have been extracted. The reimplementation of `postProcessing` should take all the descriptors (`baseDescriptor) as input, processes them, and returns the result in `baseDescriptor`. The processing algorithm implemented here could be a dimensionality reduction, such as in the case of the GTP descriptor, which uses PCA, or other algorithms. However, the algorithm used to process the descriptors should only affect their dimensions, not their quantity.
+
+Finally, the reimplementation of the `test` method should take an image as input, extract the descriptors using `baseDescriptor`, apply the post-processing algorithm, and then return the resulting descriptors. The following C++ code snippet shows how to create the .h and .cpp files for a new descriptor. After coding, it is necessary to add the .cpp file to the CMakeLists.txt.
+
 
 ```cpp
 #ifndef MY_NEW_DESCRIPTOR_H
