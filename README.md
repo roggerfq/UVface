@@ -99,7 +99,13 @@ The next figure shows the main interface along with the most important panels: t
 
 This interface allows loading a cascade classifier stored in an XML file (this XML file is constructed using [UVtrainer](https://github.com/roggerfq/UVtrainer)). The interface also allows configuring the **Base size** of the search windows, the **Step Factor** with which the search windows move, and the **Scale factor** by which the search window will increase its size after finishing scanning the image. **Maximum size** refers to the maximum allowed dimension (width or height) for an input image. To understand **GroupThreshold** and **EPS**, please refer to the [OpenCV documentation](https://docs.opencv.org/4.x/de/de1/group__objdetect__common.html).
 
-An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by commas, for example: 30, 15, 0, -15, and -30. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. 
+An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by commas, for example: 30, 15, 0, -15, and -30. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. The next video demonstrates this feature of the software:
+
+<p align="center">
+  <a href="https://youtu.be/q9VAUXHlR70?si=VP8zGbmgG5gyS6y5">
+    <img src="docs/face_detection_angles_play.svg" alt="Custom Demo Video">
+  </a>
+</p>
 
 The interface also allows setting the checkbox for **Activate skin color**, which activates a simple skin color algorithm and may help improve computation speed and reduce the false positive rate.
 
@@ -149,7 +155,7 @@ The following video briefly showcases this GUI:
 
 <p align="center">
   <a href="https://youtu.be/m9HjeDe2bR4">
-    <img src="docs/Sparse_solution_plot.png" alt="Custom Demo Video">
+    <img src="docs/Sparse_solution_plot_play.svg" alt="Custom Demo Video">
   </a>
 </p>
 
