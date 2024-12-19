@@ -156,7 +156,7 @@ The following video briefly showcases this GUI:
 
 <p align="center" style="position: relative; display: inline-block;">
   <a href="https://youtu.be/m9HjeDe2bR4">
-    <img src="docs/Sparse_solution_plot.png" alt="Custom Demo Video" style="width: 100%; height: auto;">
+    <img src="docs/Sparse_solution_plot.png" alt="Custom Demo Video" style="display: block; width: 100%; height: auto; position: relative;">
     <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 50px; color: white; background-color: rgba(0, 0, 0, 0.5); border-radius: 50%; padding: 10px;">
       ▶
     </span>
