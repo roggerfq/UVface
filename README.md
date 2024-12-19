@@ -106,7 +106,7 @@ This interface allows loading a cascade classifier stored in an XML file (this X
 An important configuration is the **Detection degrees**; by default, it is set to 0, but it is possible to detect faces at different angles by entering each angle separated by commas, for example: 30, 15, 0, -15, and -30. Additionally, it is possible to enable **Normalize the rotations**, which means that the detections will adjust the best angle for the faces detected. The next video demonstrates this feature of the software:
 
 <p align="center">
-  <a href="https://youtu.be/A5R_hCTV79w">
+  <a href="https://youtu.be/q9VAUXHlR70">
     <img src="docs/face_detection_angles_play.svg" alt="Custom Demo Video">
   </a>
 </p>
