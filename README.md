@@ -244,6 +244,22 @@ RECOGNIZER_FACIAL::RECOGNIZER_FACIAL() {
 }
 ```
 
+## Results
+### Face detector stage
+For this test, I used the FDDB dataset [5]. The next figure shows the ROC curve:
+
+<div align="center">
+    <img src="docs/ROC_detector.svg" alt="descriptor_config_gui">
+</div>
+
+The following images display some results. Here, the green box represents the detection, and the red ellipse indicates the label:
+
+<div align="center">
+    <img src="docs/detections.png" alt="descriptor_config_gui">
+</div>
+
+### Face recognition stage
+
 ## Author
 Roger Figueroa Quintero - [LinkedIn Profile](https://www.linkedin.com/in/roger-figueroa-quintero/)
 
@@ -259,5 +275,7 @@ This project is licensed under the [MIT License](LICENSE.md), allowing unrestric
 [3] K. Mikolajczyk and C. Schmid, "Scale and affine invariant interest point detectors," *Int. J. Comput. Vision*, vol. 60, no. 1, pp. 63-86, 2004. [Online]. Available: https://www.robots.ox.ac.uk/~vgg/research/affine/detectors.html.
 
 [4] Y. Li, "Coordinate descent optimization for l1 minimization with application to compressed sensing; a greedy algorithm solving the unconstrained problem," *Inverse Problems and Imaging*, vol. 3, pp. 1-17, 2009.
+
+[5] Jain, V., & Learned-Miller, E. (2010). FDDB: A benchmark for face detection in unconstrained settings. University of Massachusetts Amherst. Retrieved from https://people.cs.umass.edu/~elm/papers/fddb.pdf
 
 
