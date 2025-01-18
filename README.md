@@ -245,7 +245,7 @@ RECOGNIZER_FACIAL::RECOGNIZER_FACIAL() {
 ```
 
 ## Results
-### Face detector stage
+### Face Detector Stage
 For this test, I used the FDDB dataset [5]. The next figure shows the ROC curve:
 
 <div align="center">
@@ -258,7 +258,30 @@ The following images display some results. Here, the green box represents the de
     <img src="docs/detections.png" alt="descriptor_config_gui">
 </div>
 
-### Face recognition stage
+### Face Recognition Stage (Open-set Test)
+
+The next test was carried out using images from the ALLFACES, YALEB, ORL, and FIE datasets. Overall, the challenges in this test include pose changes, changes in expressions, and extreme lighting variations. The following table illustrates the distribution of the training set and test set, divided into genuine and impostor individuals:
+
+| Dataset | Set Training | Genuine | Impostor |
+|---------|--------------|---------|----------|
+| ALLFACES | 10           | 10      | 10       |
+| YALEB    | 19           | 19      | 19       |
+| ORL      | 20           | 20      | 20       |
+| FIE      | 100          | 100     | 100      |
+| Total    | 149          | 149     | 149      |
+
+The next figure shows the ROC curve of the test:
+
+<div align="center">
+    <img src="docs/roc_recognizer.png" alt="descriptor_config_gui">
+</div>
+
+### Changing the Number of Training Images (Close-set Test)
+The next test was performed using the ORL dataset, choosing 5 images for testing and varying the number of training images from 5 to 1. The following graph shows the results:
+
+<div align="center">
+    <img src="docs/orl_test.png" alt="descriptor_config_gui">
+</div>
 
 ## Author
 Roger Figueroa Quintero - [LinkedIn Profile](https://www.linkedin.com/in/roger-figueroa-quintero/)
