@@ -260,15 +260,14 @@ The following images display some results. Here, the green box represents the de
 
 ### Face Recognition Stage (Open-set Test)
 
-The next test was carried out using images from the ALLFACES [6], YALEB [7], ORL [8], and FIE [9] datasets. Overall, the challenges in this test include pose changes, changes in expressions, and extreme lighting variations. The following table illustrates the distribution of the training set and test set, divided into genuine and impostor individuals:
-
-| Dataset | Set Training | Genuine | Impostor |
-|---------|--------------|---------|----------|
-| ALLFACES | 10           | 10      | 10       |
-| YALEB    | 19           | 19      | 19       |
-| ORL      | 20           | 20      | 20       |
-| FIE      | 100          | 100     | 100      |
-| Total    | 149          | 149     | 149      |
+The next test was carried out using images from the ALLFACES [6], YALEB [7], ORL [8], and FIE [9] datasets. The test consists of forming a set of genuine and impostor individuals, then training the face recognition system with only one image chosen from the genuine set, and testing the system with all the remaining images, including those of genuine and impostor individuals. In total, the number of individuals was 149. The next table shows the number of individuals chosen from each dataset:
+| Dataset | Genuine | Impostor |
+|---------|---------|----------|
+| ALLFACES| 10      | 10       |
+| YALEB   | 19      | 19       |
+| ORL     | 20      | 20       |
+| FIE     | 100     | 100      |
+| Total   | 149     | 149      |
 
 The next figure shows the ROC curve of the test:
 
