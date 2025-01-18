@@ -260,7 +260,7 @@ The following images display some results. Here, the green box represents the de
 
 ### Face Recognition Stage (Open-set Test)
 
-The next test was carried out using images from the ALLFACES, YALEB, ORL, and FIE datasets. Overall, the challenges in this test include pose changes, changes in expressions, and extreme lighting variations. The following table illustrates the distribution of the training set and test set, divided into genuine and impostor individuals:
+The next test was carried out using images from the ALLFACES [6], YALEB [7], ORL [8], and FIE [9] datasets. Overall, the challenges in this test include pose changes, changes in expressions, and extreme lighting variations. The following table illustrates the distribution of the training set and test set, divided into genuine and impostor individuals:
 
 | Dataset | Set Training | Genuine | Impostor |
 |---------|--------------|---------|----------|
@@ -280,7 +280,7 @@ The next figure shows the ROC curve of the test:
 The next test was performed using the ORL dataset, choosing 5 images for testing and varying the number of training images from 5 to 1. The following graph shows the results:
 
 <div align="center">
-    <img src="docs/orl_test.png" alt="close-set test orl">
+    <img src="docs/orl_test.png" alt="close-set test orl" style="width: 50%;">
 </div>
 
 ## Author
@@ -301,4 +301,11 @@ This project is licensed under the [MIT License](LICENSE.md), allowing unrestric
 
 [5] Jain, V., & Learned-Miller, E. (2010). FDDB: A benchmark for face detection in unconstrained settings. University of Massachusetts Amherst. Retrieved from https://people.cs.umass.edu/~elm/papers/fddb.pdf
 
+[6] "Collection of Facial Images," DataHub, [Online]. Available: https://old.datahub.io/dataset/collection-of-facial-images/resource/3e873716-d995-471b-9a48-0d93411ab99b. [Accessed: 18-Jan-2025].
+
+[7] A. Georghiades, P. Belhumeur, and D. Kriegman, "From Few to Many: Illumination Cone Models for Face Recognition Under Variable Lighting and Pose," IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 23, no. 6, pp. 643-660, Jun. 2001.
+
+[8] F. S. Samaria and A. C. Harter, "Parameterisation of a stochastic model for human face identification," Proc. 1994 IEEE Workshop on Applications of Computer Vision, Dec. 1994, pp. 138-142.
+
+[9] C. E. Thomaz, "FEI Face Database," Center for Computing (CET), FEI University, 2004. [Online]. Available: https://fei.edu.br/~cet/facedatabase.html. [Accessed: 18-Jan-2025].
 
