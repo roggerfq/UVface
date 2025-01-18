@@ -276,7 +276,7 @@ The next figure shows the ROC curve of the test:
     <img src="docs/roc_recognizer.svg" alt="ROC recognition Open-set test">
 </div>
 
-### Changing the Number of Training Images (Close-set Test)
+### Varying the Number of Training Images (Close-set Test)
 The next test was performed using the ORL dataset, choosing 5 images for testing and varying the number of training images from 5 to 1. The following graph shows the results:
 
 <div align="center">
