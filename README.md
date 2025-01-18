@@ -249,13 +249,13 @@ RECOGNIZER_FACIAL::RECOGNIZER_FACIAL() {
 For this test, I used the FDDB dataset [5]. The next figure shows the ROC curve:
 
 <div align="center">
-    <img src="docs/ROC_detector.svg" alt="descriptor_config_gui">
+    <img src="docs/ROC_detector.svg" alt=" ROC face detection">
 </div>
 
 The following images display some results. Here, the green box represents the detection, and the red ellipse indicates the label:
 
 <div align="center">
-    <img src="docs/detections.png" alt="descriptor_config_gui">
+    <img src="docs/detections.png" alt="results">
 </div>
 
 ### Face Recognition Stage (Open-set Test)
@@ -273,14 +273,14 @@ The next test was carried out using images from the ALLFACES, YALEB, ORL, and FI
 The next figure shows the ROC curve of the test:
 
 <div align="center">
-    <img src="docs/roc_recognizer.png" alt="descriptor_config_gui">
+    <img src="docs/roc_recognizer.svg" alt="ROC recognition Open-set test">
 </div>
 
 ### Changing the Number of Training Images (Close-set Test)
 The next test was performed using the ORL dataset, choosing 5 images for testing and varying the number of training images from 5 to 1. The following graph shows the results:
 
 <div align="center">
-    <img src="docs/orl_test.png" alt="descriptor_config_gui">
+    <img src="docs/orl_test.png" alt="close-set test orl">
 </div>
 
 ## Author
